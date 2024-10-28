@@ -23,6 +23,14 @@
 
     };
 
+// Key positions?
+// -----------------------------------------------------------------------------------------
+// | 0   |  1   |  2   |  3   |  4   |  5   |   |  6   |  7    |  8   |  9   |  10  |  11  |
+// | 12  |  13  |  14  |  15  |  16  |  17  |   |  18  |  19   |  20  |  21  |  22  |  23  |
+// | 24  |  25  |  26  |  27  |  28  |  29  |   |  30  |  31   |  32  |  33  |  34  |  35  |
+// | 36  |  37  |  38  |  39  |  40  |  41  |   |  42  |  43   |  44  |  45  |  46  |  47  |
+//                     |  48  |  49  |  50  |   |  51  |  52   |  53  |
+
         keymap {
                 compatible = "zmk,keymap";
 
@@ -35,11 +43,11 @@
 //                    | RSE | BSP | DEL |   | ENT | SPC  | LWR |
 
                         bindings = <
-   &ht PLUS EQUAL   &ht EXCL N1 &ht AT N2   &ht HASH N3  &ht DLLR N4    &ht PRCNT N5    &ht CARET N6 &ht AMPS N7 &ht STAR N8  &ht LPAR N9 &ht RPAR N0    &ht UNDER KP_MINUS
-   &kp TAB          &kp Q       &kp W       &kp E        &kp R          &kp T           &kp Y        &kp U       &kp I        &kp O       &kp P          &ht PIPE BSLH
-   &kp ESC          &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F    &kp G           &kp H        &mt RSHFT J &mt RCTRL K  &mt RALT L  &mt RGUI SEMI  &ht DQT SQT
-   &caps_word       &kp Z       &kp X       &kp C        &kp V          &kp B           &kp N        &kp M       &ht LT COMMA &ht GT DOT  &ht QMARK FSLH &kp RC(B) 
-                                            &mo 2        &mt LGUI BSPC  &kp DEL         &mt RGUI RET &kp SPACE   &mo 1 
+   &ht PLUS EQUAL   &ht EXCL N1 &ht AT N2   &ht HASH N3  &ht DLLR N4            &ht PRCNT N5    &ht CARET N6 &ht AMPS N7            &ht STAR N8  &ht LPAR N9  &ht RPAR N0    &ht UNDER KP_MINUS
+   &kp TAB          &kp Q       &kp W       &kp E        &kp R                  &kp T           &kp Y        &kp U                  &kp I        &kp O        &kp P          &ht PIPE BSLH
+   &kp ESC          &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F            &kp G           &kp H        &mt RSHFT J            &mt RCTRL K  &mt RALT L   &mt RGUI SEMI  &ht DQT SQT
+   &caps_word       &kp Z       &kp X       &kp C        &mt LG(LS(LC(LALT))) V &kp B           &kp N        &mt LG(LS(LC(LALT))) M &ht LT COMMA &ht GT DOT   &ht QMARK FSLH &kp RC(B) 
+                                            &mo 2        &mt LGUI BSPC          &kp DEL         &mt RGUI RET &kp SPACE   &mo 1 
                         >;
                 };
 
