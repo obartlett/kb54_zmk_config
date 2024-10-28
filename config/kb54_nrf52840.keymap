@@ -8,6 +8,8 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define HYPER LG(LS(LC(LALT)))
+
 / {
 
     behaviors {
@@ -39,15 +41,15 @@
 // | =+   |  1  |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |  -_    |
 // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |  \     |
 // | ESC  |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '     |
-// | CAPS |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | CTRL+B |
+// | CAPS |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | CTRL+B (for tmux)
 //                    | RSE | BSP | DEL |   | ENT | SPC  | LWR |
 
                         bindings = <
-   &ht PLUS EQUAL   &ht EXCL N1 &ht AT N2   &ht HASH N3  &ht DLLR N4            &ht PRCNT N5    &ht CARET N6 &ht AMPS N7            &ht STAR N8  &ht LPAR N9  &ht RPAR N0    &ht UNDER KP_MINUS
-   &kp TAB          &kp Q       &kp W       &kp E        &kp R                  &kp T           &kp Y        &kp U                  &kp I        &kp O        &kp P          &ht PIPE BSLH
-   &kp ESC          &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F            &kp G           &kp H        &mt RSHFT J            &mt RCTRL K  &mt RALT L   &mt RGUI SEMI  &ht DQT SQT
-   &caps_word       &kp Z       &kp X       &kp C        &mt LG(LS(LC(LALT))) V &kp B           &kp N        &mt LG(LS(LC(LALT))) M &ht LT COMMA &ht GT DOT   &ht QMARK FSLH &kp RC(B) 
-                                            &mo 2        &mt LGUI BSPC          &kp DEL         &mt RGUI RET &kp SPACE   &mo 1 
+   &ht PLUS EQUAL   &ht EXCL N1 &ht AT N2   &ht HASH N3  &ht DLLR N4    &ht PRCNT N5    &ht CARET N6 &ht AMPS N7    &ht STAR N8  &ht LPAR N9  &ht RPAR N0    &ht UNDER KP_MINUS
+   &kp TAB          &kp Q       &kp W       &kp E        &kp R          &kp T           &kp Y        &kp U          &kp I        &kp O        &kp P          &ht PIPE BSLH
+   &kp ESC          &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F    &kp G           &kp H        &mt RSHFT J    &mt RCTRL K  &mt RALT L   &mt RGUI SEMI  &ht DQT SQT
+   &caps_word       &kp Z       &kp X       &kp C        &mt HYPER V    &kp B           &kp N        &mt HYPER M    &ht LT COMMA &ht GT DOT   &ht QMARK FSLH &kp RC(B) 
+                                            &mo 2        &mt LGUI BSPC  &kp DEL         &mt RGUI RET &kp SPACE      &mo 1 
                         >;
                 };
 
