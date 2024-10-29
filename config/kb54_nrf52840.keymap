@@ -53,7 +53,7 @@
    &kp TAB          &kp Q       &kp W       &kp E        &kp R          &kp T           &kp Y        &kp U          &kp I        &kp O        &kp P          &ht PIPE BSLH
    &kp ESC          &mt LGUI A  &mt LALT S  &mt LCTRL D  &mt LSHFT F    &kp G           &kp H        &mt RSHFT J    &mt RCTRL K  &mt RALT L   &mt RGUI SEMI  &ht DQT SQT
    &caps_word       &ht GRAVE Z &kp X       &kp C        &mt HYPER V    &kp B           &kp N        &mt HYPER M    &ht LT COMMA &ht GT DOT   &ht QMARK FSLH &kp RC(B) 
-                                            &mo 1        &mt LGUI BSPC  &kp DEL         &mt RGUI RET &kp SPACE      &mo 2 
+                                            &mo 1        &kp BSPC  &mt LGUI DEL         &mt RGUI RET &kp SPACE      &mo 2 
                         >;
                 };
 
@@ -66,7 +66,7 @@
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LG(LFT) | LA(LFT) | LA(RGT) | LG(RGT) |       | VOL+ |
 // |      |     |     |     |     |     |   | LFT     | DWN     |  UP     | RGT     |       |      |
 // |      |     |     |     |     |     |   |         | PG_DN   |  PG_UP  |         |       |      |
-//                    |     |     |     |   |         |         |         |
+//                    |  X  |     |     |   |         |         |         |
 
                         bindings = <
    &trans       &trans          &trans          &trans          &trans          &trans                  &trans      &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp C_MUTE &kp C_VOL_DN
@@ -84,15 +84,15 @@
 // | RST  | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |  F11 |
 // |      |     |     |     |  '  |  -  |   |     |     |     |     |     |  F12 |
 // |      |  {  |  }  |  (  |  )  |  |  |   |     |     |     |     |     |      |
-// |      |  `  |  #  |  [  |  ]  |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+// |      |  `  |  #  |  [  |  ]  |     |   |     |     |     |     |     |  RST |
+//                    |     |     |     |   |     |     |  X  |
                         bindings = <
 
 
    &bootloader &kp F1     &kp F2          &kp F3          &kp F4      &kp F5              &kp F6      &kp F7          &kp F8          &kp F9      &kp F10  &kp F11
    &trans      &trans     &trans          &trans          &ht DQT SQT &ht UNDER KP_MINUS  &trans      &trans          &trans          &trans      &trans   &kp F12  
    &trans      &kp LBRC    &kp RBRC       &kp LPAR        &kp RPAR    &ht PIPE BSLH       &trans      &trans          &trans          &trans      &trans   &trans  
-   &trans      &kp GRAVE   &kp HASH       &kp LBKT        &kp RBKT    &trans              &trans      &trans          &trans          &trans      &trans   &trans  
+   &trans      &kp GRAVE   &kp NUHS       &kp LBKT        &kp RBKT    &trans              &trans      &trans          &trans          &trans      &trans   &bootloader
                                           &trans          &trans      &trans              &trans      &trans          &trans  
                         >;
                 };
