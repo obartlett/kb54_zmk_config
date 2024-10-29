@@ -102,7 +102,7 @@
    &trans      &trans     &trans          &trans          &ht DQT SQT &ht UNDER KP_MINUS  &trans      &trans          &trans          &trans      &trans   &kp F12  
    &trans      &kp LBRC    &kp RBRC       &kp LPAR        &kp RPAR    &ht PIPE BSLH       &trans      &trans          &trans          &trans      &trans   &trans  
    &trans      &kp GRAVE   &kp NUHS       &kp LBKT        &kp RBKT    &trans              &trans      &trans          &trans          &trans      &trans   &bootloader
-                                          &trans          &trans      &trans              &trans      &trans          &trans  
+                                          &kp RC(B)       &kp ESC     &kp TAB             &trans      &trans          &trans  
                         >;
                 };
         };
