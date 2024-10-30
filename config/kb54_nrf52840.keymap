@@ -36,7 +36,7 @@
         };
 
 // SLOW
-        rps: require_prior_idle {
+        rps: require_prior_idle2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
