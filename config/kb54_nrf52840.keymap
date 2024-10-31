@@ -69,7 +69,7 @@
             bindings = <
 &ht PLUS EQUAL  &ht EXCL N1  &ht AT N2   &ht HASH N3  &ht DLLR N4     &ht PRCNT N5    &ht CARET N6  &ht AMPS N7   &ht STAR N8   &ht LPAR N9  &ht RPAR N0     &ht UNDER KP_MINUS
 &kp TAB         &kp Q        &kp W       &kp E        &kp R           &kp T           &kp Y         &kp U         &kp I         &kp O        &kp P           &ht PIPE BSLH
-&kp ESC         &rps LGUI A  &rp LALT S  &rp LCTRL D  &rp LSHFT F     &kp G           &kp H         &rp RSHFT J   &rp RCTRL K   &rp RALT L   &rps RGUI SEMI  &ht DQT SQT
+&kp ESC         &rps LGUI A  &rp LALT S  &rp LCTRL D  &rp LSHFT F     &lt 1 G         &kp H         &rp RSHFT J   &rp RCTRL K   &rp RALT L   &rps RGUI SEMI  &ht DQT SQT
 &caps_word      &ht GRAVE Z  &kp X       &kp C        &rps HYPER V    &kp B           &kp N         &rps HYPER M  &ht LT COMMA  &ht GT DOT   &ht QMARK FSLH  &kp RC(B)
                                          &mo 1        &kp BSPC        &mt LGUI DEL    &mt RGUI RET  &kp SPACE     &mo 2
             >;
@@ -92,7 +92,7 @@
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LG(LEFT)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp LG(RIGHT)  &trans      &kp C_VOL_UP
 &trans      &trans        &trans        &trans        &trans        &trans          &kp LEFT      &kp DOWN      &kp UP         &kp RIGHT      &trans      &trans
 &trans      &trans        &trans        &trans        &trans        &trans          &trans        &kp PG_DN     &kp PG_UP      &trans         &trans      &kp RC(RG(Q))
-                                        &trans        &trans        &trans          &trans        &trans        &trans
+                                        &trans        &trans        &trans          &key_repeat   &trans        &trans
             >;
         };
 
