@@ -47,7 +47,7 @@
         };
 
         // https://github.com/zmkfirmware/zmk/issues/2577#issuecomment-2427661923
-        tmux_caps: hold_tap_kp_kp {
+        tmux_caps: hold_tap_tmux_caps {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_KP_KP";
             bindings = <&kp>,<&caps_word>;
