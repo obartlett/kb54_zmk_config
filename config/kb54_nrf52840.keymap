@@ -45,17 +45,6 @@
 
             label = "SLOW";
         };
-
-        // https://github.com/zmkfirmware/zmk/issues/2577#issuecomment-2427661923
-        tmux_caps: hold_tap_tmux_caps {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP_KP_KP";
-            bindings = <&kp>,<&caps_word>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "balanced";
-        };
     };
 
     // Key positions?
@@ -78,11 +67,11 @@
             //                    | LWR | BSP | DEL |   | ENT | SPC  | RSE |
 
             bindings = <
-&ht PLUS EQUAL           &ht EXCL N1  &ht AT N2   &ht HASH N3  &ht DLLR N4     &ht PRCNT N5    &ht CARET N6  &ht AMPS N7   &ht STAR N8   &ht LPAR N9  &ht RPAR N0     &ht UNDER KP_MINUS
-&kp TAB                  &kp Q        &kp W       &kp E        &kp R           &kp T           &kp Y         &kp U         &kp I         &kp O        &kp P           &ht PIPE BSLH
-&kp ESC                  &rps LGUI A  &rp LALT S  &rp LCTRL D  &rp LSHFT F     &lt 1 G         &lt 2 H       &rp RSHFT J   &rp RCTRL K   &rp RALT L   &rps RGUI SEMI  &ht DQT SQT
-&tmux_caps RC(B) 0    &ht GRAVE Z  &kp X       &kp C        &rps HYPER V    &kp B           &kp N         &rps HYPER M  &ht LT COMMA  &ht GT DOT   &ht QMARK FSLH  &kp RC(B)
-                                                  &mo 1        &kp BSPC        &mt LGUI DEL    &mt RGUI RET  &kp SPACE     &mo 2
+&ht PLUS EQUAL  &ht EXCL N1  &ht AT N2   &ht HASH N3  &ht DLLR N4     &ht PRCNT N5    &ht CARET N6  &ht AMPS N7   &ht STAR N8   &ht LPAR N9  &ht RPAR N0     &ht UNDER KP_MINUS
+&kp TAB         &kp Q        &kp W       &kp E        &kp R           &kp T           &kp Y         &kp U         &kp I         &kp O        &kp P           &ht PIPE BSLH
+&kp ESC         &rps LGUI A  &rp LALT S  &rp LCTRL D  &rp LSHFT F     &lt 1 G         &kp H         &rp RSHFT J   &rp RCTRL K   &rp RALT L   &rps RGUI SEMI  &ht DQT SQT
+&caps_word      &ht GRAVE Z  &kp X       &kp C        &rps HYPER V    &kp B           &kp N         &rps HYPER M  &ht LT COMMA  &ht GT DOT   &ht QMARK FSLH  &kp RC(B)
+                                         &mo 1        &kp BSPC        &mt LGUI DEL    &mt RGUI RET  &kp SPACE     &mo 2
             >;
         };
 
@@ -113,14 +102,14 @@
 
             // -----------------------------------------------------------------------------------------
             // | RST  | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |  F11 |
-            // |      |  <  |  >  |     |  '  |  -  |   |     |     |     |     |     |  F12 |
+            // |      |     |     |     |  '  |  -  |   |     |     |     |     |     |  F12 |
             // |      |  {  |  }  |  (  |  )  |  |  |   |     |     |     |     |     |      |
             // |      |  `  |  #  |  [  |  ]  |     |   |     |     |     |     |     |  RST |
             //                    |     |     |     |   |     |     |  X  |
 
             bindings = <
 &bootloader  &kp F1     &kp F2     &kp F3     &kp F4       &kp F5                &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11
-&trans       &kp LT     &kp GT     &trans     &ht DQT SQT  &ht UNDER KP_MINUS    &trans  &trans  &trans  &trans  &trans   &kp F12
+&trans       &trans     &trans     &trans     &ht DQT SQT  &ht UNDER KP_MINUS    &trans  &trans  &trans  &trans  &trans   &kp F12
 &trans       &kp LBRC   &kp RBRC   &kp LPAR   &kp RPAR     &ht PIPE BSLH         &trans  &trans  &trans  &trans  &trans   &trans
 &trans       &kp GRAVE  &kp RA(N3) &kp LBKT   &kp RBKT    &trans                &trans  &trans  &trans  &trans  &trans   &bootloader
                                    &kp RC(B)  &kp ESC      &kp TAB               &trans  &trans  &trans
